@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Login Ágil</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+        
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background: #45a049;
+        }
+        
+        .btn-register {
+            background: #008CBA;
+        }
+        
+        .btn-register:hover {
+            background: #0077a3;
+        }
+        
+        .btn-users {
+            background: #ff9800;
+        }
+        
+        .btn-users:hover {
+            background: #e68900;
+        }
+        
+        .divider {
+            text-align: center;
+            margin: 20px 0;
+            color: #999;
+            position: relative;
+        }
+        
+        .divider::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #ddd;
+            z-index: 1;
+        }
+        
+        .divider span {
+            background: white;
+            padding: 0 10px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .info-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4CAF50;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #777;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Sistema de Login Ágil</h1>
+        <p class="subtitle">Projeto de Engenharia de Software</p>
+        
+        <!-- Formulário de Login -->
+        <h2>Login</h2>
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <label for="login-username">Usuário:</label>
+                <input type="text" id="login-username" name="username" required placeholder="Digite seu usuário">
+            </div>
+            
+            <div class="form-group">
+                <label for="login-password">Senha:</label>
+                <input type="password" id="login-password" name="password" required placeholder="Digite sua senha">
+            </div>
+            
+            <button type="submit">Entrar no Sistema</button>
+        </form>
+        
+        <div class="divider"><span>OU</span></div>
+        
+        <!-- Formulário de Registro -->
+        <h2>Registrar Novo Usuário</h2>
+        <form action="/register" method="POST">
+            <div class="form-group">
+                <label for="reg-username">Novo Usuário:</label>
+                <input type="text" id="reg-username" name="username" required placeholder="Escolha um nome de usuário">
+            </div>
+            
+            <div class="form-group">
+                <label for="reg-password">Nova Senha:</label>
+                <input type="password" id="reg-password" name="password" required placeholder="Digite uma senha">
+            </div>
+            
+            <button type="submit" class="btn-register">Criar Nova Conta</button>
+        </form>
+        
+        <!-- Botão para ver usuários -->
+        <div style="margin-top: 20px; text-align: center;">
+            <a href="/users">
+                <button type="button" class="btn-users">👥 Ver Usuários Registrados</button>
+            </a>
+        </div>
+        
+        <!-- Caixa de informações -->
+        <div class="info-box">
+            <strong>💡 Informações:</strong><br>
+            • Sistema desenvolvido com Python Flask<br>
+            • Metodologia Ágil (Kanban)<br>
+            • Testes automatizados<br>
+            • CI/CD com GitHub Actions
+        </div>
+        
+        <div class="footer">
+            Projeto de Engenharia de Software<br>
+            Desenvolvido com metodologias ágeis
+        </div>
+    </div>
+</body>
+</html>
